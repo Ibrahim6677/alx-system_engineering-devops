@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# Display infomation about the file 'school'
+
+if [ -e "school" ]
+then
+	echo "schoschool file exists[3~[3~[3~[C[C[C[C["
+	if [ -s "school" ]
+	then
+		echo ""[Dschool file is not empty"
+	else
+		echo "school file is empty"
+	fi
+
+	if [ -f "school" ]
+	then
+		echo "school is a regular file"
+	fi
+else
+	echo 
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[D[D[D[C[C"school file does not exist
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C"
+fi

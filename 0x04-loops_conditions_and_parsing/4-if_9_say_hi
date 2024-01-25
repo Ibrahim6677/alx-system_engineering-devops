@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# Displays "Best School" 10 times using a until loop.[D[D[D[Dwhile[C[C[C[C[C[C
+
+[A[A
+[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[D[D[D
+[B[B[A[B# on the 9th iteration diplays "Hi" before ""[DBest School"
+
+count=0
+
+while [ $count -lt 10 ]
+do
+	if [ $count -eq 9 ]
+	then
+		echo "Hi"
+	fi
+	 echo "Best School"
+        (( count++ ))[A[D[D[D[D[D[D[D[D[D[D[D[[B[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[D[D
+done
