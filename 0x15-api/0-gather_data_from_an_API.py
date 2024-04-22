@@ -31,8 +31,8 @@ if __name__ == "__main__":
 
     employee_name = user_data["name"]
     total_tasks = len(todo_data)
-    completed_tasks = [task["title"]
-            for task in todo_data if task["completed"]]
+    completed_tasks = [task["title"] for task in todo_data
+            if task["completed"]]
 
     print("Employee {} is done with tasks({}/{}):".format(
         employee_name, len(completed_tasks), total_tasks))
