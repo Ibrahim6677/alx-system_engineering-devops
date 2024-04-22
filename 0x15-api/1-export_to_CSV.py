@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
-Script to retrieve and export information about an employee's TODO list
-progress in CSV format.
+Script to retrieve and export information about an employee's TODO list progress in CSV format.
 """
 
 import csv
@@ -17,8 +16,7 @@ if __name__ == "__main__":
 
     base_url = "https://jsonplaceholder.typicode.com"
     user_response = requests.get("{}/users/{}".format(base_url, employee_id))
-    todo_response = requests.get("{}/todos?userId={}".format(
-        base_url, employee_id))
+    todo_response = requests.get("{}/todos?userId={}".format(base_url, employee_id))
 
     if user_response.status_code != 200:
         print("Error: Could not retrieve user data")
@@ -36,10 +34,8 @@ if __name__ == "__main__":
 
     with open(csv_file, mode='w', newline='') as file:
         writer = csv.writer(file)
-        writer.writerow(["USER_ID", "USERNAME",
-            "TASK_COMPLETED_STATUS", "TASK_TITLE"])
+        writer.writerow(["USER_ID", "USERNAME", "TASK_COMPLETED_STATUS", "TASK_TITLE"])
         for task in todo_data:
-            writer.writerow([employee_id, employee_name,
-                str(task["completed"]), task["title"]])
+            writer.writerow([employee_id, employee_name, str(task["completed"]), task["title"]])
 
     print("CSV file '{}' has been created successfully.".format(csv_file))
