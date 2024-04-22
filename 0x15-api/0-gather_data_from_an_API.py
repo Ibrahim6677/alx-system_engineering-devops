@@ -35,7 +35,7 @@ if __name__ == "__main__":
             for task in todo_data if task["completed"]]
 
     print("Employee {} is done with tasks({}/{}):".format(
-        employee_name, len(completed_tasks),total_tasks))
+        employee_name, len(completed_tasks), total_tasks))
 
     for task_title in completed_tasks:
         print("\t", task_title)
