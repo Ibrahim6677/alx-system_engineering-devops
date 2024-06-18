@@ -3,8 +3,8 @@
 Function that queries the Reddit API and prints
 the top ten hot posts of a subreddit
 """
-import sys
 import requests
+import sys
 
 
 def add_title(hot_list, hot_posts):
