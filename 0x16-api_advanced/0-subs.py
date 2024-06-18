@@ -19,7 +19,7 @@ def number_of_subscribers(subreddit):
     """
     user_agent = 'Mozilla/5.0'
     headers = {'User-Agent': user_agent}
-    url = f"https://www.reddit.com/r/{subreddit}/about.json"
+    url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
     response = requests.get(url, headers=headers, allow_redirects=False)
     if response.status_code!= 200:
         return 0
@@ -34,5 +34,5 @@ if __name__ == "__main__":
         sys.exit(1)
     subreddit = sys.argv[1]
     subscribers = number_of_subscribers(subreddit)
-    print(f"The subreddit {subreddit} has {subscribers} subscribers.")
+    print("The subreddit {} has {} subscribers.".format(subreddit, subscribers))
 
